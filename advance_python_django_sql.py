@@ -13,6 +13,34 @@ Python decorator function
  in the decorator, function remember its last state using yield
 
 
+(BBI: August 04, 2020)
+ Python OOP
+ * Polymorphism
+ * Function over-riding / loading
+ * Virtual functions
+ * Static class
+ * Difference Interface / Concrete Classes
+
+Django
+* ORM
+* Middleware and custom middleware
+* MVT
+* Celery / Redis
+
+Django DRF
+* serializers
+* viewsets / apiview
+* models viewsets
+
+
+Other Things
+* Chat app
+* Web sockets
+* Auth, Role, permissions
+* Authorization / Authentication
+*
+
+
 Django ORM
 raw querries
 Django models, reverse relation, on delete CASCADE
