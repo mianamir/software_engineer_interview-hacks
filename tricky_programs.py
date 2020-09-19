@@ -14,3 +14,11 @@ if number > 1:
         print(f"{number} is prime number")
 else:
     print(f"{number} is not prime number")
+
+
+
+
+
+
+
+
