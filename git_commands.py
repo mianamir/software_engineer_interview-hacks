@@ -82,6 +82,8 @@ git branch -d branch-name
 git branch -a
 git push origin --delete branch-name
 
+# Git Advance Commands
+
 
 
 
