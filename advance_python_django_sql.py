@@ -24,6 +24,8 @@ Python decorator function
 Django
 * ORM
 * Middleware and custom middleware
+https://docs.djangoproject.com/en/3.1/ref/middleware/s
+https://simpleisbetterthancomplex.com/tutorial/2016/07/18/how-to-create-a-custom-django-middleware.html
 * MVT
 * Celery / Redis
 
