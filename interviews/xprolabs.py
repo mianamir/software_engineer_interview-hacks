@@ -76,7 +76,8 @@ Senior Software Engineer / Python, Django
 # https://django-allauth.readthedocs.io/en/latest/
 # https://learndjango.com/tutorials/django-allauth-tutorial
 
-
+# 17- Signals
+# https://docs.djangoproject.com/en/3.1/topics/signals/
 
 
 

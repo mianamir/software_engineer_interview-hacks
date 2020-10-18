@@ -95,6 +95,19 @@ def factorial_with_recursion(num):
 
 # factorial_of_a_number()
 
+from collections import Counter
+
+
+def find_dup_chars():
+    string = input("Enter string: ")
+    # words_count = Counter(string)
+    for char in string:
+        char_count = string.count(char)
+        if char_count > 1:
+            print(char, char_count)
+
+
+find_dup_chars()
 
 
 
@@ -138,7 +151,19 @@ def factorial_with_recursion(num):
 
 
 
+"""
+Q1: Find the most repeated character in a string. 
+Input: "most repeated character"
+Output: "e"
+"""
 
+string = "most repeated character"
+
+for char in string:
+    count_char = string.count(char)
+
+    if count_char > 1:
+        print(count_char)
 
 
 
