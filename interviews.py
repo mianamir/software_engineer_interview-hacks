@@ -144,7 +144,110 @@ Columns: ID, Name, Class_ID, Marks
 
 
 
+data = [
+  {"id": 1, "parent": None, "name": "Apple"},
+  {"id": 2, "parent": 1, "name": "Banana"},
+  {"id": 3, "parent": 1, "name": "Orange"},
+  {"id": 4, "parent": 2, "name": "Peach"},
+  {"id": 5, "parent": 2, "name": "Date"},
+  {"id": 6, "parent": 3, "name": "Something"},
+  {"id": 7, "parent": 1, "name": "Amir"}
+]
 
+# print(data)
+from pprint import pprint
+
+
+def get_parent_data(data):
+    """
+    Get parent records
+    :param data:
+    :return:
+    """
+    res = dict()
+    res['children'] = list()
+    for item in data:
+        # 1st iter
+        try:
+            if item['parent'] == None:
+                res['parent'] = None
+                res['name'] = item['name']
+                for inner_item in data[1:]:
+                    try:
+
+                        if int(item['id']) == int(inner_item['parent']):
+
+                            res['children'].append(
+                                {
+                                    'id': int(inner_item['id']),
+                                    'parent': int(item['id']),
+                                    'name': inner_item['name'],
+                                    'children': list()
+
+                                }
+                            )
+
+                    except Exception:
+                        pass
+
+            else:
+                for inner_item in data:
+                    try:
+
+                        if int(item['id']) == int(inner_item['parent']):
+
+                            res['children'].append(
+                                {
+                                    'id': int(inner_item['id']),
+                                    'parent': int(item['id']),
+                                    'name': inner_item['name'],
+                                    'children': list()
+
+                                }
+                            )
+
+                    except Exception:
+                        pass
+
+        except Exception:
+            pass
+    return res
+
+
+parent_data = get_parent_data(data)
+
+
+pprint(parent_data)
+
+
+
+"""
+{
+  id: 1,
+  parent: null,
+  name: "Apple",
+  children: [
+    {
+      id: 2,
+      parent: 1,
+      name: "Banana"
+      children: [
+        {id: 4, parent: 2, name: "Peach"},
+        {id: 5, parent: 2, name: "Date"}
+      ]
+    },
+    {
+      id: 3,
+      parent: 1,
+      name: "Orange"
+      children: [
+        {id: 6, parent: 3, name: "Something"}
+      ]
+    },
+  ]
+}
+
+"""
 
 
 
